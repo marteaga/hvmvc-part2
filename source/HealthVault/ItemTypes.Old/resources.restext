@@ -1,0 +1,115 @@
+# Copyright(c) Microsoft Corporation.
+# This content is subject to the Microsoft Reference Source License,
+# see http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx.
+# All other rights reserved.
+
+# Used in many files
+ListSeparator=, 
+ListFormat=, {0}
+XSpace=X 
+
+ParseXmlNavNull=The XML navigator must be provided to parse the XML.
+WriteXmlNullWriter=The XmlWriter must be specified.
+WriteXmlEmptyNodeName=The containing node name must be specified.
+WhenNullValue=The value of the When property cannot be null.
+WhitespaceOnlyValue=The value cannot contain only whitespace.
+StringNullOrEmpty=The string value cannot be null or the empty string.
+
+################################################################
+# Thing types
+################################################################
+
+# AerobicSession.cs
+AerobicSessionMandatory=The value of the Session property cannot be null.
+AerobicSessionUnexpectedNode=The specific XML does not contain an aerobic-session node.
+AerobicSessionDurationNotPositive=The duration must be greater than zero.
+AerobicSessionPeakHrNotPositive=The peak heart rate must be greater than zero.
+AerobicSessionAvgHrNotPositive=The average heart rate must be greater than zero.
+AerobicSessionMinHrNotPositive=The minimum heart rate must be greater than zero.
+AerobicSessionEnergyNotPositive=The energy consumed must be greater than zero.
+AerobicSessionEnergyFromFatNotPositive=The energy from fat consumed must be greater than zero.
+AerobicSessionPeakSpeedNotPositive=The peak speed must be greater than zero.
+AerobicSessionAvgSpeedNotPositive=The average speed must be greater than zero.
+AerobicSessionMinSpeedNotPositive=The minimum speed must be greater than zero.
+AerobicSessionPeakPaceNotPositive=The peak pace must be greater than zero.
+AerobicSessionAvgPaceNotPositive=The average pace must be greater than zero.
+AerobicSessionMinPaceNotPositive=The minimum pace must be greater than zero.
+AerobicSessionPeakPowerNotPositive=The peak power must be greater than zero.
+AerobicSessionAvgPowerNotPositive=The average power must be greater than zero.
+AerobicSessionMinPowerNotPositive=The minimum power must be greater than zero.
+AerobicSessionLeftRightBalanceNotPercentage=The left-right balance must be between zero and one inclusive.
+AerobicSessionPeakCadenceNotPositive=The peak cadence must be greater than zero.
+AerobicSessionAvgCadenceNotPositive=The average cadence must be greater than zero.
+AerobicSessionMinCadenceNotPositive=The minimum cadence must be greater than zero.
+AerobicSessionPeakTemperatureNotPositive=The peak temperature must be greater than zero.
+AerobicSessionAvgTemperatureNotPositive=The average temperature must be greater than zero.
+AerobicSessionMinTemperatureNotPositive=The minimum temperature must be greater than zero.
+AerobicSessionAirPressureNotPositive=The air pressure must be greater than zero.
+
+# Encounter.cs
+EncounterUnexpectedNode=The specified XML does not contain an encounter node.
+EncounterWhenNotSet=The date when the encounter occurred must be set before creating or updating the item.
+EncounterTypeNotSet=The type of the encounter must be set before creating or updating the item.
+EncounterTypeMandatory=The type of the encounter must be set.
+
+
+# FamilyHistory.cs
+FamilyHistoryUnexpectedNode=The specified XML does not contain a family-history node.
+FamilyHistoryConditionNotSet=The condition for the family history must be set before creating or updating the item.
+FamilyHistoryConditionMandatory=A family history must always have a condition.
+FamilyHistoryAgeOfOnsetNegative=The age of onset of a condition must be greater than or equal to zero.
+FamilyHistoryAgeOfResolutionNegative=The age of resolution of a condition must be greater than or equal to zero.
+FamilyHistoryToStringFormatAgeOfOnset=, at {0} year(s) old
+FamilyHistoryToStringFormatAgeOfResolution=, resolved at {0} year(s) old
+
+# Immunization.cs
+ImmunizationUnexpectedNode=The specified XML does not contain an immunization node.
+ImmunizationNameMandatory=The value of the Name property cannot be null.
+ImmunizationNameNotSet=The immunization name must be set before creating or updating the item.
+ImmunizationDateAdministratedNotSet=The immunization administrated date must be set before creating or updating the item.
+ImmunizationDateAdministratedMandatory=The value of the DateAdministrated property cannot be null.
+ImmunizationToStringFormat={0} ({1})
+
+# LabTestResultsV1.cs
+LabTestResultsUnexpectedNode=The specified XML does not contain a lab-test-results node.
+LabTestResultsLabGroupNotSet=A lab test results must always have at least one lab group. 
+LabTestResultsLabGroupMandatory=A lab test results must always have at least one lab group. 
+
+# LabTestResultsGroupTypeV1.cs
+LabTestResultsGroupTypeGroupNameNotSet=A lab test results group type group name must be set before creating or updating the item. 
+LabTestResultsGroupTypeGroupNameMandatory=A lab test results group type must always have a group name. 
+
+# LabTestResultValueTypeV1.cs
+LabTestResultValueTypeMeasurementNotSet=A lab test result value type must always have a measurement.
+
+# LapSession.cs
+LapSessionSecondsIntoSessionNonNegative=The seconds into the session must be greater than or equal to zero.
+
+# Medication.cs
+MedicationUnexpectedNode=The specified XML does not contain a medication node.
+MedicationToStringFormatValueUnit={0} {1}
+
+# Procedure.cs
+ProcedureUnexpectedNode=The specified XML does not contain a procedure node.
+ProcedureWhenNotSet=The time when the procedure occurred must be set before creating or updating the item.
+
+# Sample.cs
+SampleTimeOffsetNegative=The sample time offset must be greater than or equal to zero.
+ValueIsMandatory=The sample value is mandatory and cannot be null.
+
+# SampleSet.cs
+SampleSetBaseTimeMandatory=The sample set base time must be specified.
+SampleSetBaseTimeNotSpecified=The sample set base time must be set before creating or updating the item.
+SampleSetUnitMandatory=The sample unit must be specified.
+SampleSetUnitNotSpecified=The sample unit must be set before creating or updating the item.
+SampleSetUnitCodeMandatory=The sample unit code must be specified.
+SampleSetUnitCodeNotSpecified=The sample unit code must be set before creating or updating the item.
+
+# Spirometer.cs
+SpirometerUnexpectedNode=The specified XML does not contain an spirometer node.
+SpirometerWhenNotSet=The date when the spirometer reading occurred must be set before creating or updating the item.
+
+# TestResultRangeV1.cs
+TestResultRangeRangeTypeNotSet=The type of test result range must be set before creating or updating the item.
+TestResultRangeRangeNotSet=The range of test result range must be set before creating or updating the item. 
+TestResultRangeToStringFormat={0}, {1}

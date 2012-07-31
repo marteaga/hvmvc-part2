@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+// Copyright(c) Microsoft Corporation.
+// This content is subject to the Microsoft Reference Source License,
+// see http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx.
+// All other rights reserved.
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0262F4E1-0B29-4DB3-B536-AF7074510244}</ProjectGuid>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>Microsoft.Health</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.Health</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveRecordAuthorization.cs" />
+    <Compile Include="AnonymousConnection.cs" />
+    <Compile Include="ApplicationBinaryConfiguration.cs" />
+    <Compile Include="ApplicationConfiguration.cs" />
+    <Compile Include="ApplicationConnection.cs" />
+    <Compile Include="ApplicationInfo.cs" />
+    <Compile Include="ApplicationOptions.cs" />
+    <Compile Include="ApplicationProvisioning\Provisioner.cs" />
+    <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AuthenticatedConnection.cs" />
+    <Compile Include="Authentication\AbstractCryptoServiceProviderHash.cs" />
+    <Compile Include="Authentication\ApplicationRecordAuthorizationAction.cs" />
+    <Compile Include="Authentication\ApplicationTokenCreationInfo.cs" />
+    <Compile Include="Authentication\AuthenticatedSessionKeySet.cs" />
+    <Compile Include="Authentication\AuthenticationTokenCreationStatus.cs" />
+    <Compile Include="Authentication\AuthenticationTokenKeySetPair.cs" />
+    <Compile Include="Authentication\AuthSessionKeySetPairs.cs" />
+    <Compile Include="Authentication\CreateAuthenticationTokenResult.cs" />
+    <Compile Include="Authentication\Credential.cs" />
+    <Compile Include="Authentication\CryptoConfiguration.cs" />
+    <Compile Include="Authentication\CryptoHash.cs" />
+    <Compile Include="Authentication\CryptoHashFinalized.cs" />
+    <Compile Include="Authentication\CryptoHmac.cs" />
+    <Compile Include="Authentication\CryptoHMACFinalized.cs" />
+    <Compile Include="Authentication\CryptoServiceProvderHmac.cs" />
+    <Compile Include="Authentication\CryptoServiceProviderHash.cs" />
+    <Compile Include="Authentication\CryptoServiceProviderUnsafe.cs" />
+    <Compile Include="Authentication\CryptoUtil.cs" />
+    <Compile Include="Authentication\PassportCredential.cs" />
+    <Compile Include="Authentication\SafeCryptoContextHandle.cs" />
+    <Compile Include="Authentication\SafeCryptoHashHandle.cs" />
+    <Compile Include="Authentication\SafeCryptoKeyHandle.cs" />
+    <Compile Include="Authentication\Sha256.cs" />
+    <Compile Include="Authentication\Sha256Hmac.cs" />
+    <Compile Include="Authentication\WebApplicationCredential.cs" />
+    <Compile Include="AuthorizationRule.cs" />
+    <Compile Include="AuthorizationRuleDisplayFlags.cs" />
+    <Compile Include="AuthorizationSetDefinition.cs" />
+    <Compile Include="AuthorizedRecordState.cs" />
+    <Compile Include="Blob.cs" />
+    <Compile Include="BlobEncoder.cs" />
+    <Compile Include="BlobFormat.cs" />
+    <Compile Include="BlobHashAlgorithm.cs" />
+    <Compile Include="BlobHasher.cs" />
+    <Compile Include="BlobHashInfo.cs" />
+    <Compile Include="BlobPutParameters.cs" />
+    <Compile Include="BlobSignatureItem.cs" />
+    <Compile Include="BlobStore.cs" />
+    <Compile Include="BlobStream.cs" />
+    <Compile Include="CertificateType.cs" />
+    <Compile Include="CertificateValidationException.cs" />
+    <Compile Include="Certificate\ApplicationCertificate.cs" />
+    <Compile Include="Certificate\CertificateName.cs" />
+    <Compile Include="Certificate\CertificateStore.cs" />
+    <Compile Include="Certificate\CryptoApiBlob.cs" />
+    <Compile Include="Certificate\Handles.cs" />
+    <Compile Include="Certificate\NativeMethods.cs" />
+    <Compile Include="Certificate\Util.cs" />
+    <Compile Include="CommonItemData.cs" />
+    <Compile Include="ConversionFailureException.cs" />
+    <Compile Include="CultureSpecificDictionary.cs" />
+    <Compile Include="DateRangeSetDefinition.cs" />
+    <Compile Include="EasyWebRequest.cs" />
+    <Compile Include="Eventing\CommonNotificationData.cs" />
+    <Compile Include="Eventing\CommonSubscriptionData.cs" />
+    <Compile Include="Eventing\HealthRecordItemChangedEventArgs.cs" />
+    <Compile Include="Eventing\HealthRecordItemChangedFilter.cs" />
+    <Compile Include="Eventing\HealthRecordItemChangedItem.cs" />
+    <Compile Include="Eventing\HealthRecordItemChangedSubscription.cs" />
+    <Compile Include="Eventing\HttpNotificationChannelDefinition.cs" />
+    <Compile Include="Eventing\NotificationAuthenticationSharedKeyInfo.cs" />
+    <Compile Include="Eventing\NotificationChannelDefinition.cs" />
+    <Compile Include="Eventing\NotificationHandler.cs" />
+    <Compile Include="Eventing\Subscription.cs" />
+    <Compile Include="Eventing\SubscriptionManager.cs" />
+    <Compile Include="GetAuthorizedPeopleSettings.cs" />
+    <Compile Include="HealthApplicationConfiguration.cs" />
+    <Compile Include="HealthClientApplication.cs" />
+    <Compile Include="HealthClientAuthorizedConnection.cs" />
+    <Compile Include="HealthRecordAccessor.cs" />
+    <Compile Include="HealthRecordAuthorizationNotPossible.cs" />
+    <Compile Include="HealthRecordAuthorizationRequiredException.cs" />
+    <Compile Include="HealthRecordAuthorizationStatus.cs" />
+    <Compile Include="HealthRecordExporter.cs" />
+    <Compile Include="HealthRecordFilter.cs" />
+    <Compile Include="HealthRecordInfo.cs" />
+    <Compile Include="HealthRecordItem.cs" />
+    <Compile Include="HealthRecordItemCollection.cs" />
+    <Compile Include="HealthRecordItemDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HealthRecordItemDataTableView.cs" />
+    <Compile Include="HealthRecordItemDeserializationException.cs" />
+    <Compile Include="HealthRecordItemExtension.cs" />
+    <Compile Include="HealthRecordItemFlags.cs" />
+    <Compile Include="HealthRecordItemKey.cs" />
+    <Compile Include="HealthRecordItemPermissions.cs" />
+    <Compile Include="HealthRecordItemRelationship.cs" />
+    <Compile Include="HealthRecordItemSections.cs" />
+    <Compile Include="HealthRecordItemSerializationException.cs" />
+    <Compile Include="HealthRecordItemSignature.cs" />
+    <Compile Include="HealthRecordItemSignatureMethod.cs" />
+    <Compile Include="HealthRecordItemState.cs" />
+    <Compile Include="HealthRecordItemStates.cs" />
+    <Compile Include="HealthRecordItemTypeDefinition.cs" />
+    <Compile Include="HealthRecordItemTypeHandler.cs" />
+    <Compile Include="HealthRecordItemTypePermission.cs" />
+    <Compile Include="HealthRecordItemTypeSections.cs" />
+    <Compile Include="HealthRecordItemTypeVersionInfo.cs" />
+    <Compile Include="HealthRecordReauthorizationRequired.cs" />
+    <Compile Include="HealthRecordSearcher.cs" />
+    <Compile Include="HealthRecordState.cs" />
+    <Compile Include="HealthRecordUpdateInfo.cs" />
+    <Compile Include="HealthRecordView.cs" />
+    <Compile Include="HealthServiceAccessDeniedException.cs" />
+    <Compile Include="HealthServiceApplicationDuplicateCredentialException.cs" />
+    <Compile Include="HealthServiceAssemblyInfo.cs" />
+    <Compile Include="HealthServiceAudit.cs" />
+    <Compile Include="HealthServiceAuditAccessAvenue.cs" />
+    <Compile Include="HealthServiceAuditAction.cs" />
+    <Compile Include="HealthServiceAuthenticatedSessionTokenExpiredException.cs" />
+    <Compile Include="HealthServiceConnection.cs" />
+    <Compile Include="HealthServiceCredentialTokenExpiredException.cs" />
+    <Compile Include="HealthServiceEmailNotValidatedException.cs" />
+    <Compile Include="HealthServiceErrorContext.cs" />
+    <Compile Include="HealthServiceException.cs" />
+    <Compile Include="HealthServiceExceptionHelper.cs" />
+    <Compile Include="HealthServiceInvalidApplicationAuthorizationException.cs" />
+    <Compile Include="HealthServiceInvalidPersonException.cs" />
+    <Compile Include="HealthServiceInvalidRecordException.cs" />
+    <Compile Include="HealthServiceLocation.cs" />
+    <Compile Include="HealthServiceMailAddressMalformedException.cs" />
+    <Compile Include="HealthServiceMethodInfo.cs" />
+    <Compile Include="HealthServiceMethodVersionInfo.cs" />
+    <Compile Include="HealthServiceOtherDataSizeLimitExceededException.cs" />
+    <Compile Include="HealthServicePasswordNotStrongException.cs" />
+    <Compile Include="HealthServiceRecordQuotaExceededException.cs" />
+    <Compile Include="HealthServiceRequest.cs" />
+    <Compile Include="HealthServiceRequestCancelledException.cs" />
+    <Compile Include="HealthServiceResponseData.cs" />
+    <Compile Include="HealthServiceResponseError.cs" />
+    <Compile Include="HealthServiceShellInfo.cs" />
+    <Compile Include="HealthServiceShellRedirectToken.cs" />
+    <Compile Include="HealthServiceStatusCode.cs" />
+    <Compile Include="HealthServiceStatusCodeManager.cs" />
+    <Compile Include="HealthVaultMethods.cs" />
+    <Compile Include="HealthVaultPlatform.cs" />
+    <Compile Include="HealthVaultPlatformAlternateId.cs" />
+    <Compile Include="HealthVaultPlatformApplication.cs" />
+    <Compile Include="HealthVaultPlatformInformation.cs" />
+    <Compile Include="HealthVaultPlatformItem.cs" />
+    <Compile Include="HealthVaultPlatformMessage.cs" />
+    <Compile Include="HealthVaultPlatformOpenQuery.cs" />
+    <Compile Include="HealthVaultPlatformPatientConnect.cs" />
+    <Compile Include="HealthVaultPlatformPerson.cs" />
+    <Compile Include="HealthVaultPlatformProvisioning.cs" />
+    <Compile Include="HealthVaultPlatformRecord.cs" />
+    <Compile Include="HealthVaultPlatformTrace.cs" />
+    <Compile Include="HealthVaultPlatformVocabulary.cs" />
+    <Compile Include="IEasyWebResponseHandler.cs" />
+    <Compile Include="IMarshallable.cs" />
+    <Compile Include="InactiveRecordAuthorization.cs" />
+    <Compile Include="IncompatibleVersionException.cs" />
+    <Compile Include="InvalidConfigurationException.cs" />
+    <Compile Include="ItemTypeDataColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemTypeManager.cs" />
+    <Compile Include="ItemTypes\HealthRecordItemData.cs" />
+    <Compile Include="ItemTypes\PasswordProtectAlgorithm.cs" />
+    <Compile Include="ItemTypes\PasswordProtectedPackage.cs" />
+    <Compile Include="MailMessage.cs" />
+    <Compile Include="MailMessageFromApplication.cs" />
+    <Compile Include="MailRecipient.cs" />
+    <Compile Include="OfflineWebApplicationConnection.cs" />
+    <Compile Include="OpenQuery.cs" />
+    <Compile Include="OtherItemData.cs" />
+    <Compile Include="OtherItemDataCSV.cs" />
+    <Compile Include="OtherItemDataCSVDouble.cs" />
+    <Compile Include="OtherItemDataCSVEscape.cs" />
+    <Compile Include="OtherItemDataCSVItem.cs" />
+    <Compile Include="OtherItemDataCSVString.cs" />
+    <Compile Include="PatientConnect\ConnectPackage.cs" />
+    <Compile Include="PatientConnect\ConnectPackageCreationParameters.cs" />
+    <Compile Include="PatientConnect\PatientConnection.cs" />
+    <Compile Include="PatientConnect\ValidatedPatientConnection.cs" />
+    <Compile Include="PersonInfo.cs" />
+    <Compile Include="RecordAuthorization.cs" />
+    <Compile Include="RelationshipType.cs" />
+    <Compile Include="ResourceRetriever.cs" />
+    <Compile Include="SDKHelper.cs" />
+    <Compile Include="ServiceInfo.cs" />
+    <Compile Include="settype.cs" />
+    <Compile Include="SignatureFailureException.cs" />
+    <Compile Include="TypeHandlerAlreadyRegisteredException.cs" />
+    <Compile Include="TypeIdSetDefinition.cs" />
+    <Compile Include="UserTagSetDefinition.cs" />
+    <Compile Include="Validator.cs" />
+    <Compile Include="Vocabulary.cs" />
+    <Compile Include="VocabularyAuthorization.cs" />
+    <Compile Include="VocabularyItem.cs" />
+    <Compile Include="VocabularyItemCollection.cs" />
+    <Compile Include="VocabularyItemDataConverter.cs" />
+    <Compile Include="VocabularyKey.cs" />
+    <Compile Include="VocabularySearchHelper.cs" />
+    <Compile Include="VocabularySearchParameters.cs" />
+    <Compile Include="VocabularySearchType.cs" />
+    <Compile Include="WebApplicationConnection.cs" />
+    <Compile Include="XmlWriterHelper.cs" />
+    <Compile Include="XPathHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources.restext">
+      <LogicalName>resources.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="**\*.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

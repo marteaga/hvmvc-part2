@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Health", "Core\Microsoft.Health.csproj", "{0262F4E1-0B29-4DB3-B536-AF7074510244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Health.ItemTypes", "ItemTypes\Microsoft.Health.ItemTypes.csproj", "{17CB11F7-4E29-4DA3-B717-7F7E2E37C3E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Health.Web", "Web\Microsoft.Health.Web.csproj", "{F3DC590A-803D-4996-A3F2-DDBA13326566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0262F4E1-0B29-4DB3-B536-AF7074510244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0262F4E1-0B29-4DB3-B536-AF7074510244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0262F4E1-0B29-4DB3-B536-AF7074510244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0262F4E1-0B29-4DB3-B536-AF7074510244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CB11F7-4E29-4DA3-B717-7F7E2E37C3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CB11F7-4E29-4DA3-B717-7F7E2E37C3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CB11F7-4E29-4DA3-B717-7F7E2E37C3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CB11F7-4E29-4DA3-B717-7F7E2E37C3E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DC590A-803D-4996-A3F2-DDBA13326566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3DC590A-803D-4996-A3F2-DDBA13326566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3DC590A-803D-4996-A3F2-DDBA13326566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3DC590A-803D-4996-A3F2-DDBA13326566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
